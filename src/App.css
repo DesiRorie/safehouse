@@ -1,0 +1,144 @@
+:root {
+  --primary-color: #3b5998;
+  --secondary-color: red;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(220, 216, 216);
+}
+.loginDiv {
+  background-color: var(--primary-color);
+  height: 75vh;
+  margin: 0;
+  color: white;
+  display: flex;
+
+  justify-content: center;
+}
+.loginDiv h1 {
+  margin-top: 20vh;
+}
+.loginDiv h1 {
+  margin-top: 10vh;
+  margin-right: 2px; /* Optional: Add some margin between the elements */
+}
+.loginDiv svg {
+  margin-top: 10.5vh;
+}
+.loginForm {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  border: 1px solid gray;
+  border-radius: 5px;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loginForm button {
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  color: white;
+  transition: 0.5s;
+  margin-top: 10%;
+}
+.loginForm button:hover {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+.loginForm input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+
+  margin-bottom: 5px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.loginForm label {
+  color: #888;
+}
+.loginForm p {
+  color: var(--primary-color);
+}
+.links {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+.homePageDiv {
+  background-color: rgb(220, 216, 216);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.homeNav ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+  justify-content: space-between;
+  margin-top: 0;
+}
+.homeNav ul li {
+  margin-left: 10px;
+}
+
+.homeNav ul li:last-child {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.greetingDiv {
+  margin-left: 9px;
+}
+.greetingDiv h1 {
+  font-weight: 500;
+  color: black;
+}
+.greetingDiv p {
+  font-weight: 200;
+}
+.homePageFooter {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid black;
+  padding-top: 2px;
+}
+.homePageFooter svg {
+  color: black;
+}
+.homePageChoices {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.homePageChoices button {
+  border-radius: 15px;
+  background-color: white;
+  color: #3b5998;
+  height: 30px;
+  font-size: 12px;
+  margin: 1px;
+  box-shadow: 2px 1px 2px #666666;
+}
