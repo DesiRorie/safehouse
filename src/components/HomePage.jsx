@@ -4,6 +4,7 @@ import GreetingDate from "./GreetingDate";
 import HomePageFooter from "./HomePageFooter";
 import HomePageChoices from "./HomePageChoices";
 import Accounts from "./Accounts";
+import OpenAccount from "./OpenAccount";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <HomePageFooter />
       <HomePageChoices />
       <Accounts />
+      <OpenAccount />
     </div>
   );
 };
