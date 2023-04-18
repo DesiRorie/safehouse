@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import GreetingDate from "./GreetingDate";
 import HomePageFooter from "./HomePageFooter";
 import HomePageChoices from "./HomePageChoices";
+import Accounts from "./Accounts";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <GreetingDate />
       <HomePageFooter />
       <HomePageChoices />
+      <Accounts />
     </div>
   );
 };

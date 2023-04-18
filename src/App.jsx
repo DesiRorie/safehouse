@@ -9,10 +9,12 @@ export const LoginContext = createContext();
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [baduser, setBadUser] = useState(false);
+  const [showUserName, setUserName] = useState("");
 
   const handleLogin = (username, password) => {
     if (username.length > 0 && password.length > 0) {
       setIsLoggedIn(true);
+      setUserName(username);
     } else {
       setBadUser(true);
     }
@@ -22,7 +24,9 @@ function App() {
   };
 
   return (
-    <LoginContext.Provider value={{ baduser, handleLogin, handleLogout }}>
+    <LoginContext.Provider
+      value={{ showUserName, baduser, handleLogin, handleLogout }}
+    >
       <div className="App">
         {/* {!isLoggedIn ? (
           <Login />

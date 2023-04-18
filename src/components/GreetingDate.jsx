@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { LoginContext } from "../App";
 
 const GreetingDate = () => {
   const [greeting, setGreeting] = useState();
@@ -7,6 +9,7 @@ const GreetingDate = () => {
   const day = today.getDate();
   const year = today.getFullYear();
   const time = today.getHours();
+  const { showUserName } = useContext(LoginContext);
 
   useEffect(() => {
     if (time < 12) {
@@ -22,7 +25,9 @@ const GreetingDate = () => {
 
   return (
     <div className="greetingDiv">
-      <h1>{greeting}</h1>
+      <h1>
+        {greeting} {showUserName}
+      </h1>
       <p>{fullDate}</p>
     </div>
   );

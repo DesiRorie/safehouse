@@ -143,3 +143,64 @@ input[type="text"]:focus {
   margin: 1px;
   box-shadow: 2px 1px 2px #666666;
 }
+
+.accountsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 9px;
+  margin-right: 5px;
+}
+.accountsDiv h2 {
+  font-weight: 500;
+}
+.accountBoxContainer {
+  display: flex;
+
+  flex-direction: column;
+}
+.accountBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 5px;
+
+  height: 200px;
+  width: 570px;
+
+  background-color: #3b5998;
+  background-color: white;
+  border: 1px solid #3b5998;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.accountBoxes h4 {
+  background-color: #3b5998;
+  margin-top: 0;
+  color: white;
+  padding: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.accountInfo {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-direction: column;
+
+  align-items: center;
+  align-self: center;
+}
+
+@media (max-width: 767px) {
+  .accountBoxes {
+    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
