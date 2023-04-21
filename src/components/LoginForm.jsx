@@ -24,6 +24,7 @@ const LoginForm = () => {
           id="inputField1"
           name="inputField1"
           placeholder=" "
+          autoComplete="username"
           value={username}
         ></input>
 
@@ -33,10 +34,11 @@ const LoginForm = () => {
             setPassword(e.target.value);
           }}
           value={password}
-          type="text"
+          type="password"
           id="inputField2"
           name="inputField2"
-          placeholder=" "
+          autoComplete="current-password"
+          placeholder=""
         ></input>
         {baduser ? (
           <p style={{ color: "red" }}>Invalid username or password</p>

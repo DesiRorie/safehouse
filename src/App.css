@@ -89,6 +89,14 @@ input[type="text"]:focus {
   margin: 0;
   padding: 0;
 }
+.homeNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(239, 238, 238); /* optional */
+  z-index: 1000; /* optional - set a high z-index to ensure the .homeNav is on top of other elements */
+}
 
 .homeNav ul {
   display: flex;
@@ -109,6 +117,7 @@ input[type="text"]:focus {
 }
 .greetingDiv {
   margin-left: 9px;
+  margin-top: 40px;
 }
 .greetingDiv h1 {
   font-weight: 500;
@@ -119,11 +128,13 @@ input[type="text"]:focus {
 }
 .homePageFooter {
   display: flex;
+  background-color: rgb(239, 238, 238);
   width: 100vw;
   justify-content: space-evenly;
   position: fixed;
   bottom: 0;
-  border-top: 1px solid black;
+
+  border-top: 1px solid #888;
   padding-top: 2px;
 }
 .homePageFooter svg {
@@ -176,6 +187,7 @@ input[type="text"]:focus {
 
   margin-left: auto;
   margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .accountBoxes h4 {
   background-color: #3b5998;
@@ -185,6 +197,10 @@ input[type="text"]:focus {
   margin-bottom: 0;
   width: 100%;
   box-sizing: border-box;
+}
+.accountBoxes:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 .accountInfo {
   display: flex;
@@ -230,9 +246,70 @@ input[type="text"]:focus {
   width: 45%;
   margin: 10px;
 }
+
+.rewardsBox {
+  display: flex;
+
+  flex-direction: column;
+}
+.rewardsBox1 {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+
+  border-radius: 5px;
+  height: 150px;
+  width: 570px;
+
+  background-color: white;
+  border: 1px solid #888;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.rewardsBox1:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.rewardsBox1 h4 {
+  margin-top: 0;
+
+  padding: 10px;
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.rewardsInfo {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 10px; */
+  padding: 10px;
+}
+.rewardLearnMore {
+  padding: 10px;
+}
+.rewardLearnMore a {
+  text-decoration: none;
+  list-style: none;
+  color: #3b5998;
+}
+
 @media (max-width: 767px) {
   .accountBoxes {
-    height: auto;
+    /* height: auto; */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .openAccountDiv {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rewardsBox1 {
+    /* height: auto; */
     width: 90%;
     margin-left: auto;
     margin-right: auto;

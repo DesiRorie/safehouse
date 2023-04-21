@@ -12,13 +12,26 @@ function App() {
   const [showUserName, setUserName] = useState("");
 
   const handleLogin = (username, password) => {
-    if (username.length > 0 && password.length > 0) {
+    if (
+      username.length > 0 &&
+      /[a-zA-Z]/.test(username) &&
+      password.length > 0
+    ) {
       setIsLoggedIn(true);
       setUserName(username);
     } else {
       setBadUser(true);
     }
   };
+
+  // const handleLogin = (username, password) => {
+  //   if (username.length > 0 && password.length > 0) {
+  //     setIsLoggedIn(true);
+  //     setUserName(username);
+  //   } else {
+  //     setBadUser(true);
+  //   }
+  // };
   const handleLogout = () => {
     setIsLoggedIn(false);
   };

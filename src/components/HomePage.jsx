@@ -5,6 +5,7 @@ import HomePageFooter from "./HomePageFooter";
 import HomePageChoices from "./HomePageChoices";
 import Accounts from "./Accounts";
 import OpenAccount from "./OpenAccount";
+import RewardsBox from "./RewardsBox";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <HomePageChoices />
       <Accounts />
       <OpenAccount />
+      <RewardsBox />
     </div>
   );
 };
