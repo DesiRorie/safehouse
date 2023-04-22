@@ -168,6 +168,10 @@ input[type="text"]:focus {
 }
 .accountBoxContainer {
   display: flex;
+  height: 200px;
+  width: 570px;
+  margin-left: auto;
+  margin-right: auto;
 
   flex-direction: column;
 }
@@ -296,9 +300,11 @@ input[type="text"]:focus {
   color: #3b5998;
 }
 .checkingDiv {
-  background-color: #888;
   width: 570px;
   height: 200px;
+  border: 1px solid #888;
+  background-color: white;
+  border-radius: 5px;
 }
 .accountPage {
   display: flex;
@@ -309,6 +315,46 @@ input[type="text"]:focus {
 .accountPage h1 {
   margin-left: 9px;
   text-align: center;
+}
+.accountPage h3 {
+  margin-left: 5px;
+}
+.checkingDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#availableBalance {
+  font-size: large;
+  font: italic;
+  color: #888;
+}
+
+.checkingDivInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  flex-direction: column;
+}
+.checkingDivInfo span {
+  font-size: x-large;
+  margin-top: 10px;
+}
+#availableBalance1 {
+  margin-left: 5px;
+  color: #888;
+}
+#availableBalance2 {
+  margin-right: 10px;
+}
+.balanceDiv {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 5px;
 }
 @media (max-width: 767px) {
   .accountBoxes {
@@ -332,5 +378,8 @@ input[type="text"]:focus {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .accountBoxContainer {
+    width: 100%;
   }
 }
