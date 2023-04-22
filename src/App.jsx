@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import { createContext, useState } from "react";
 import ForgotPage from "./components/ForgotPage";
 import HomePage from "./components/HomePage";
+import AccountPage from "./components/AccountPage";
 export const LoginContext = createContext();
 
 function App() {
@@ -54,7 +55,10 @@ function App() {
           {!isLoggedIn ? (
             <Route element={<Login />} path="/" />
           ) : (
-            <Route path="/" element={<HomePage />} />
+            <>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/accounts" element={<AccountPage />} />
+            </>
           )}
         </Routes>
       </div>
