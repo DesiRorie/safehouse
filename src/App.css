@@ -356,6 +356,46 @@ input[type="text"]:focus {
 
   margin-top: 5px;
 }
+
+.accountPageBillContainer {
+  display: flex;
+  position: relative;
+
+  flex-direction: column;
+  background-color: #3b5998;
+  /* text-align: center; */
+  margin-top: 5%;
+  margin-bottom: 10%;
+
+  width: 570px;
+  height: 200px;
+  border: 1px solid #888;
+  background-color: white;
+  border-radius: 5px;
+}
+.accountPageBillContainer button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  height: 20%;
+  background-color: #666666;
+
+  bottom: 0;
+}
+.accountPageBillContainer button:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.accountPageBill {
+  background-color: #3b5998;
+  color: white;
+}
 @media (max-width: 767px) {
   .accountBoxes {
     /* height: auto; */
@@ -381,5 +421,8 @@ input[type="text"]:focus {
   }
   .accountBoxContainer {
     width: 100%;
+  }
+  .accountPageBillContainer {
+    width: 90%;
   }
 }

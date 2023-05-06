@@ -11,6 +11,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [baduser, setBadUser] = useState(false);
   const [showUserName, setUserName] = useState("");
+  const [checkingBalance, setCheckingBalance] = useState(1000);
 
   const handleLogin = (username, password) => {
     if (
@@ -39,7 +40,14 @@ function App() {
 
   return (
     <LoginContext.Provider
-      value={{ showUserName, baduser, handleLogin, handleLogout }}
+      value={{
+        checkingBalance,
+        setCheckingBalance,
+        showUserName,
+        baduser,
+        handleLogin,
+        handleLogout,
+      }}
     >
       <div className="App">
         {/* {!isLoggedIn ? (

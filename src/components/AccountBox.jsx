@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../App";
 
 const AccountBox = () => {
+  const { checkingBalance, setCheckingBalance } = useContext(LoginContext);
+
   return (
     <>
       <div className="accountBoxContainer">
@@ -14,7 +17,11 @@ const AccountBox = () => {
             <div className="accountInfo">
               <p>Checkings(...1912 ) &gt; </p>
               <span style={{ fontWeight: "bold", marginBottom: "10px" }}>
-                $1,000
+                $
+                {checkingBalance.toLocaleString(undefined, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </span>
               <span style={{ fontWeight: "lighter", color: "#888" }}>
                 <i>Available balance</i>
