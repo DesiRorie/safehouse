@@ -1,15 +1,18 @@
-import { express } from "express";
-import cors from "cors";
-// import ---- from ----
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
-app.use(Express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5174",
+  })
+);
 
-app.use("/api/v1/____");
-app.use("*", (req, res) => {
-  res.status(404).json({ error: "not found" });
+app.get("/accounts", (req, res) => {
+  res.json({ users: ["user1", "user2", "user3", "user4"] });
 });
 
-export default app;
+app.listen(3000, () => {
+  console.log("server started");
+});
