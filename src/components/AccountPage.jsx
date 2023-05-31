@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { LoginContext } from "../App";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const AccountPage = () => {
+  const [test, setTest] = useState([{}]);
+  useEffect(() => {
+    fetch("http://localhost:3000/accounts")
+      .then((response) => response.json())
+      .then((data) => {
+        setTest(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
   const { checkingBalance, setCheckingBalance } = useContext(LoginContext);
   const [billPaid, setBillPaid] = useState(false);
   const [billPrice, setBillPrice] = useState(
